@@ -1,0 +1,35 @@
+{
+  "name": "@das-fed/dev-proxy",
+  "version": "1.0.0",
+  "description": "CLI-agnostic same-origin development proxy and process runner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wxfwill/das-fed-dev-proxy.git"
+  },
+  "homepage": "https://github.com/wxfwill/das-fed-dev-proxy#readme",
+  "bugs": {
+    "url": "https://github.com/wxfwill/das-fed-dev-proxy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wxfwill/das-fed-dev-proxy.git"
+  },
+  "homepage": "https://github.com/wxfwill/das-fed-dev-proxy#readme",
+  "bugs": {
+    "url": "https://github.com/wxfwill/das-fed-dev-proxy/issues"
+  },
+  "type": "module",
+  "exports": { ".": "./src/index.js" },
+  "bin": { "das-dev-proxy": "./bin/das-dev-proxy.js" },
+  "files": ["bin", "src"],
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "execa": "^9.6.0",
+    "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {
+    "@types/http-proxy": "^1.17.16"
+  },
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org" }
+}

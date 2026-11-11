@@ -1,0 +1,17 @@
+{
+  "listen": {
+    "host": "127.0.0.1",
+    "port": 8101
+  },
+  "fallback": "http://127.0.0.1:8102",
+  "routes": [
+    {
+      "prefix": "/demo/",
+      "target": "http://127.0.0.1:5173"
+    }
+  ],
+  "devServer": {
+    "port": 5173,
+    "base": "/demo/"
+  }
+}
