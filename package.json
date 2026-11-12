@@ -1,6 +1,6 @@
 {
-  "name": "@das-fed/dev-proxy",
-  "version": "1.0.0",
+  "name": "das-fed-dev-proxy",
+  "version": "1.0.1",
   "description": "CLI-agnostic same-origin development proxy and process runner",
   "repository": {
     "type": "git",
@@ -10,26 +10,24 @@
   "bugs": {
     "url": "https://github.com/wxfwill/das-fed-dev-proxy/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wxfwill/das-fed-dev-proxy.git"
-  },
-  "homepage": "https://github.com/wxfwill/das-fed-dev-proxy#readme",
-  "bugs": {
-    "url": "https://github.com/wxfwill/das-fed-dev-proxy/issues"
-  },
   "type": "module",
-  "exports": { ".": "./src/index.js" },
+  "exports": { ".": "./dist/index.js" },
   "bin": { "das-dev-proxy": "./bin/das-dev-proxy.js" },
-  "files": ["bin", "src"],
-  "scripts": { "test": "node --test" },
+  "files": ["bin", "dist"],
+  "scripts": {
+    "build": "node scripts/build/index.js",
+    "publish": "node scripts/publish/index.js",
+    "test": "node --test"
+  },
   "engines": { "node": ">=18" },
   "dependencies": {
     "execa": "^9.6.0",
     "http-proxy": "^1.18.1"
   },
   "devDependencies": {
-    "@types/http-proxy": "^1.17.16"
+    "@types/http-proxy": "^1.17.16",
+    "semver": "^7.7.2",
+    "vite": "^5.4.21"
   },
-  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org" }
+  "publishConfig": { "registry": "https://registry.npmjs.org" }
 }

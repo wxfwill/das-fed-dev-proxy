@@ -3,9 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort --base /demo/"
+    "build": "vite build --base /demo/",
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort --base /demo/",
+    "demo": "das-dev-proxy run --config ../dev-proxy.config.json -- vite preview --host 127.0.0.1 --port 5173 --strictPort --base /demo/"
   },
   "devDependencies": {
+    "das-fed-dev-proxy": "file:../..",
     "vite": "^5.2.7"
   }
 }
